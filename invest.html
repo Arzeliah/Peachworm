@@ -3,8 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invest</title>
-    <link rel="stylesheet" href="styles2.css">
+    <title>Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('investment.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f5966d;
+            margin-right: 20px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f5966d;
+            font-weight: bold;
+        }
+
+        .investment-options {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            margin-top: 70px;
+        }
+
+        .investment-plan, .financial-news {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #faccad;
+            border-radius: 15px;
+            width: 45%;
+            height: 300px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .financial-news {
+            background-color: #C59F8B;
+        }
+
+        h2 {
+            font-size: 35px;
+            color: #000000;
+        }
+
+        p {
+            font-size: 20px;
+            color: white;
+        }
+
+        button {
+            padding: 8px 16px; /* Reduced padding for narrower buttons */
+            font-size: 15px;
+            border: none;
+            background-color: white;
+            color: #000000;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+            align-self: center; /* Center the button horizontally within its container */
+        }
+
+        #news-button:hover {
+            background-color: #C59F8B;
+            color: white;
+        }
+
+        #invest-button:hover {
+            background-color: #faccad;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,21 +118,21 @@
                 <li><a href="#">FAQS</a></li>
                 <li><a href="investment-plan.html">INVESTMENT PLANS</a></li>
                 <li><a href="index.html">BACK TO HOME</a></li>
-                <li><a href="#">LOG IN</a></li>
+                <li><a href="login.html">LOG IN</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="investment-options">
             <div class="investment-plan">
-                <h2>Specialized <br> Investment Plans</h2>
-                <p>Select one of the various <br> investment plans to subscribe to and <br> gain valuable insight and <br> advice catered to you.</p>
-                <button onclick="location.href='investment-plan.html'">READ MORE</button>
+                <h2>Specialized Investment Plans</h2>
+                <p>Select one of the various investment plans to subscribe to and gain valuable insight and advice catered to you.</p>
+                <button id="invest-button" onclick="location.href='investment-plan.html'">READ MORE</button>
             </div>
             <div class="financial-news">
-                <h2>Real-Time Financial <br> Market News</h2>
-                <p>Read new, up to date news <br> articles about the financial market</p>
-                <button>READ MORE</button>
+                <h2>Real-Time Financial Market News</h2>
+                <p>Read new, up-to-date news articles about the financial market</p>
+                <button id="news-button" onclick="location.href='#'">READ MORE</button>
             </div>
         </div>
     </main>

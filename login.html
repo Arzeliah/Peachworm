@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background: #c07759;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .back-button button {
+            width: 100%; 
+            padding: 8px 16px;
+            background-color: #ffbe9f;
+            color: white;
+            font-weight: bold;
+            margin-right: 10px;
+            display: inline-block;
+            text-align: center; 
+            border: none;
+        }
+
+        .back-button button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            width: 30%;
+            margin: auto;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        label {
+            color: white;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #ffbe9f;
+            background-color: #ffbe9f;
+            color: white;
+        }
+
+        button {
+            width: 50%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #ffbe9f;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">PEACHWORM</div>
+        <nav>
+            <div class="back-button">
+                <button type="button" onclick="goBack()">BACK</button>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h2>Log In</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" onclick="login()">Log In</button>
+            <a href="signup.html">Don't have an account? Sign up now!</a>
+        </form>
+    </div>
+    
+    <script>
+        function login() {
+            const name = document.getElementById('name').value;
+            const password = document.getElementById('password').value;
+
+            // Check if both fields are filled
+            if (name === "" || password === "") {
+                alert("Please fill in both the name and password fields.");
+            } else {
+                // Redirect to index.html
+                window.location.href = "index.html";
+            }
+        }
+
+        function goBack() {
+            // Redirect to home page
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
